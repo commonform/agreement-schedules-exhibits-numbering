@@ -1,3 +1,7 @@
+# agreement-schedules-exhibits-numbering
+
+number traditional agreements with schedules and exhibits
+
 ```javascript
 var ase = require('agreement-schedules-exhibits-numbering')
 ```
