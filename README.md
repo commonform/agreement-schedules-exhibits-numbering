@@ -2,6 +2,8 @@
 
 number traditional agreements with schedules and exhibits
 
+This package is part of the [abstract-numbering](https://www.npmjs.com/search?q=keywords:abstract-numbering) family of packages.
+
 ```javascript
 var ase = require('agreement-schedules-exhibits-numbering')
 ```
