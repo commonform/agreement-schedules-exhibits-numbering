@@ -39,7 +39,7 @@ module.exports = function (numbering, shortForm) {
     } else {
       var scheduleNumber = (
         'Schedule ' +
-        outline([ numbering[1] ], shortForm)
+        outline([numbering[1]], shortForm)
           .replace('Section ', ''))
       if (length === 2) {
         return scheduleNumber
@@ -56,18 +56,22 @@ module.exports = function (numbering, shortForm) {
       'Exhibit ' +
       stripNounPrefix(
         outline(
-          [ { series: {
-            number: first.series.number,
-            of: first.series.of },
-          element: {
-            number: (
-              inFirstSeries
-                ? (first.element.number - 2)
-                : first.element.number),
-            of: (
-              inFirstSeries
-                ? (first.element.of - 2)
-                : first.element.of) } } ],
+          [
+            {
+              series: {
+                number: first.series.number,
+                of: first.series.of
+              },
+              element: {
+                number: inFirstSeries
+                  ? (first.element.number - 2)
+                  : first.element.number,
+                of: inFirstSeries
+                  ? (first.element.of - 2)
+                  : first.element.of
+              }
+            }
+          ],
           shortForm)))
     if (length === 1) {
       return exhibitNumber
