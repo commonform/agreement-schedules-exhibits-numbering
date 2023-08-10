@@ -15,7 +15,7 @@ function withinSchedules (numbering) {
 }
 
 function stripNounPrefix (string) {
-  return string.replace('Section ', '')
+  return string.replace('Section\u00a0', '')
 }
 
 module.exports = function (numbering, shortForm) {
@@ -29,7 +29,7 @@ module.exports = function (numbering, shortForm) {
       return (shortForm ? 'Agreement.' : 'the Agreement')
     } else {
       return (
-        (!shortForm ? 'Section ' : '') +
+        (!shortForm ? 'Section\u00a0' : '') +
         stripNounPrefix(outline(numbering.slice(1), shortForm)) +
         (!shortForm ? ' of the Agreement' : ''))
     }
@@ -38,14 +38,14 @@ module.exports = function (numbering, shortForm) {
       return (shortForm ? 'Schedules.' : 'Schedules to the Agreement')
     } else {
       var scheduleNumber = (
-        'Schedule ' +
+        'Schedule\u00a0' +
         outline([numbering[1]], shortForm)
-          .replace('Section ', ''))
+          .replace('Section\u00a0', ''))
       if (length === 2) {
         return scheduleNumber
       } else {
         return (
-          (!shortForm ? 'Section ' : '') +
+          (!shortForm ? 'Section\u00a0' : '') +
           stripNounPrefix(outline(numbering.slice(2), shortForm)) +
           (!shortForm ? (' of ' + scheduleNumber) : ''))
       }
@@ -53,7 +53,7 @@ module.exports = function (numbering, shortForm) {
   } else {
     var inFirstSeries = (numbering[0].series.number === 1)
     var exhibitNumber = (
-      'Exhibit ' +
+      'Exhibit\u00a0' +
       stripNounPrefix(
         outline(
           [
@@ -77,7 +77,7 @@ module.exports = function (numbering, shortForm) {
       return exhibitNumber
     } else {
       return (
-        (!shortForm ? 'Section ' : '') +
+        (!shortForm ? 'Section\u00a0' : '') +
         stripNounPrefix(outline(numbering.slice(1), shortForm)) +
         (!shortForm ? (' of ' + exhibitNumber) : ''))
     }

@@ -59,7 +59,7 @@ assert.deepStrictEqual(
       }
     ]
   ),
-  'Section 1 of the Agreement'
+  'Section\u00a01 of the Agreement'
 )
 
 assert.deepStrictEqual(
@@ -79,7 +79,7 @@ assert.deepStrictEqual(
       }
     ]
   ),
-  'Section 1(a) of the Agreement'
+  'Section\u00a01(a) of the Agreement'
 )
 
 assert.deepStrictEqual(
@@ -149,7 +149,7 @@ assert.deepStrictEqual(
     ],
     true
   ),
-  'Schedule 1.'
+  'Schedule\u00a01.'
 )
 ```
 
@@ -174,7 +174,7 @@ assert.deepStrictEqual(
     ],
     false
   ),
-  'Section 1 of Schedule 1'
+  'Section\u00a01 of Schedule\u00a01'
 )
 ```
 
@@ -193,7 +193,7 @@ assert.deepStrictEqual(
     ],
     true
   ),
-  'Exhibit 1.'
+  'Exhibit\u00a01.'
 )
 
 assert.deepStrictEqual(
@@ -206,7 +206,7 @@ assert.deepStrictEqual(
     ],
     true
   ),
-  'Exhibit A-1.'
+  'Exhibit\u00a0A-1.'
 )
 
 assert.deepStrictEqual(
@@ -219,7 +219,7 @@ assert.deepStrictEqual(
     ],
     true
   ),
-  'Exhibit K-13.'
+  'Exhibit\u00a0K-13.'
 )
 
 assert.deepStrictEqual(
@@ -232,7 +232,7 @@ assert.deepStrictEqual(
     ],
     false
   ),
-  'Exhibit 1'
+  'Exhibit\u00a01'
 )
 ```
 
@@ -253,7 +253,7 @@ assert.deepStrictEqual(
     ],
     false
   ),
-  'Section 1 of Exhibit 1'
+  'Section\u00a01 of Exhibit\u00a01'
 )
 
 assert.deepStrictEqual(
